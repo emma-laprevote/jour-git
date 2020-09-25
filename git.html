@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang=fr>
+    <head>
+        <title>Répertoire commandes GIT</title>
+        <link rel="stylesheet" type="text/css" href="git.css">
+        <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    
+    
+    </head>
+
+    <body>
+
+        <header>
+            <h1>AIDE MEMOIRE GITHUB GIT</h1>
+        </header>
+        
+        <table>
+
+            <th>Configuration des outils</th>
+            <tr>
+                <td class="com">$ git config --global user.name "[nom]"</td>
+                <td>Définit le nom que vous voulez associer à toutes vos opérations de commit</td>
+            </tr> 
+
+            <tr>
+                <td class="com">$ git config --global user.email "[adresse email]"</td>
+                <td>Définit l'email que vous voulez associer à toutes vos opérations de commi</td>
+            </tr>
+
+            <tr>
+                <td class="com">$ git config --global color.ui auto</td>
+                <td>Active la colorisation de la sortie en ligne de commande</td>
+            </tr>
+
+            <th>Créer des dépots</th>
+            <tr>
+                <td class="com">$ git init [nom-du-projet]</td>
+                <td>Crée un dépôt local à partir du nom spécifié</td>
+            </tr>
+
+            <tr>
+                <td class="com">$ git clone [url]</td>
+                <td>Télécharge un projet et tout son historique de versions</td>
+            </tr>
+
+            <th>Effectuer des changements</th>
+            <tr>
+                <td class="com">$ git status</td>
+                <td>Liste tous les nouveaux fichiers et les fichiers modifiés à commiter</td>
+            </tr>
+
+            <tr>
+                <td class="com">$ git diff</td>
+                <td>Montre les modifications de fichier qui ne sont pas encore indexées</td>
+            </tr>
+
+            <tr>
+                <td class="com">$ git add [fichier]</td>
+                <td>Ajoute un instantané du fichier, en préparation pour le suivi de version</td>
+            </tr>
+
+            <tr>
+                <td class="com">$ git diff --staged</td>
+                <td>Montre les différences de fichier entre la version indexée et la dernière version</td>
+            </tr>
+
+            <tr>
+                <td class="com">$ git reset [fichier]</td>
+                <td>Enleve le fichier de l'index, mais conserve son contenu</td>
+            </tr>
+
+            <tr>
+                <td class="com">$ git commit -m "[message descriptif]"</td>
+                <td>Enregistre des instantanés de fichiers de façon permanente dans l'historique des versions</td>
+            </tr>
+
+            <th>Grouper des changements</th>
+            <tr>
+                <td class="com">$ git branch</td>
+                <td>Liste toutes les branches locales dans le dépôt courant</td>
+            </tr>
+
+            <tr>
+                <td class="com">$ git branch [nom-de-branche]</td>
+                <td>Crée une nouvelle branche</td>
+            </tr>
+
+            <tr>
+                <td class="com">$ git checkout [nom-de-branche]</td>
+                <td>Bascule sur la branche spécifiée et met à jour le répertoire de travail</td>
+            </tr>
+
+            <tr>
+                <td class="com">$ git merge [nom-de-branche]</td>
+                <td>Combine dans la branche courante l'historique de la branche spécifiée</td>
+            </tr>
+
+            <tr>
+                <td class="com">$ git branch -d [nom-de-branche]</td>
+                <td>Supprime la branche spécifiée</td>
+            </tr>
+
+            <th>Changements au niveau des noms de fichiers</th>
+            <tr>
+                <td class="com">$ git rm [fichier]</td>
+                <td>Supprime le fichier du répertoire de travail et met à jour l'index</td>
+            </tr>
+
+            <tr>
+                <td class="com">$ git rm --cached [fichier]</td>
+                <td>Supprime le fichier du système de suivi de version mais le préserve localement</td>
+            </tr>
+
+            <tr>
+                <td class="com">$ git mv [fichier-nom] [fichier-nouveau-nom]</td>
+                <td>Renomme le fichier et prépare le changement pour un commit </td>
+            </tr>
+
+            <th>Exclure du suivi de version</th>
+            <tr>
+                <td class="com">*.log<br>
+                    build/<br>
+                    temp-*</td>
+                <td>Un fichier texte nommé .gitignore  permet d'éviter 
+                    le suivi de version accidentel pour les fichiers et 
+                    chemins correspondant aux patterns spécifiés</td>
+            </tr>
+
+            <tr>
+                <td class="com">$ git ls-files --other --ignored --exclude-standard</td>
+                <td>Liste tous les fichiers exclus du suivi de version dans ce projet</td>
+            </tr>
+            <th>Enregistrer des fragments</th>
+            <tr>
+                <td class="com">$ git stash</td>
+                <td>Enregistre de manière temporaire tous les fichiers sous suivi 
+                    de version qui ont été modifiés ("remiser son travail")</td>
+            </tr>
+
+            <tr>
+                <td class="com">$ git stash pop</td>
+                <td>Applique une remise et la supprime immédiatement</td>
+            </tr>
+
+            <tr>
+                <td class="com">$ git stash list</td>
+                <td>Liste toutes les remises</td>
+            </tr>
+
+            <tr>
+                <td class="com">$ git stash drop</td>
+                <td>Supprime la remise la plus récente</td>
+            </tr>
+
+            <th>Vérifier l'historique des versions</th>
+            <tr>
+                <td class="com">$ git log</td>
+                <td>Montre l'historique des versions pour la branche courante</td>
+            </tr>
+            <tr>
+                <td class="com">$ git log --follow [fichier]</td>
+                <td>Montre l'historique des versions, y compris les actions de renom-mage, pour le fichier spécifié</td>
+            </tr>
+            <tr>
+                <td class="com">$ git diff [premiere-branche]...[deuxieme-branche]</td>
+                <td>Montre les différences de contenu entre deux branches</td>
+            </tr>
+            <tr>
+                <td class="com">$ git show [commit]</td>
+                <td>Montre les modifications de métadonnées et de contenu inclues dans le commit spécifié</td>
+            </tr>
+            <th>Refaire des commits</th>
+            <tr>
+                <td class="com">$ git reset [commit]</td>
+                <td>Annule tous les commits après `[commit]`, 
+                    en conservant les modifications localemen</td>
+            </tr>
+            <tr>
+                <td class="com">$ git reset --hard [commit]</td>
+                <td>Supprime tout l'historique et les modifications effectuées après le commit spécifié</td>
+            </tr>
+            <th>Synchroniser les changements</th>
+            <tr>
+                <td class="com">$ git fetch [nom-de-depot]</td>
+                <td>Récupère tout l'historique du dépôt nommé</td>
+            </tr>
+            <tr>
+                <td class="com">$ git merge [nom-de-depot]/[branche]</td>
+                <td>Fusionne la branche du dépôt dans la branche locale courante</td>
+            </tr>
+            <tr>
+                <td class="com">$ git push [alias] [branche]</td>
+                <td>Envoie tous les commits de la branche locale vers GitHub</td>
+            </tr>
+            <tr>
+                <td class="com">$ git pull</td>
+                <td>Récupère tout l'historique du dépôt nommé et incorpore les modifications</td>
+            </tr>
+
+        </table>
+    </body>
+</html>

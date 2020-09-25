@@ -1,0 +1,47 @@
+
+html {
+    background-image: url("https://www.transparenttextures.com/patterns/cream-pixels.png");
+    background-color: #102126;
+}
+
+body {
+    background-color: white;
+    width: 950px;
+    margin: auto;
+}
+
+header {
+    width: 950px;
+    background-color: black;
+    margin: auto;
+    height: 150px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    padding-top: 60px;
+    font-family: 'Righteous', cursive;
+}
+table {
+    width: 950px;
+    margin: auto;
+  }
+  
+  th {
+    font-family: 'Rock Salt', cursive;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+  
+  td {
+    letter-spacing: 1px;
+    border-bottom: solid 1px black;
+    font-family: 'Courier Prime', monospace;
+    font-size: 12px;
+  }
+
+  .com {
+      font-weight: bold;
+  }
+
